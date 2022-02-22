@@ -10,7 +10,7 @@ import { Component, Input, Output,EventEmitter } from "@angular/core";
         <!-- <div [ngClass]="{green:project?.time ==='8:00 am',bold:project?.time ==='8:00 am'}"  [ngSwitch]="project?.time"> -->
         <!-- <div [ngClass]="getStartTimeClass()"  [ngSwitch]="project?.time"> -->
         <!-- <div [style.color]="project?.time ==='8:00 am' ? '#003300' : '#bbb'"  [ngSwitch]="project?.time"> -->
-        <div [ngStyle]="{'color':project?.time ==='8:00 am' ? '#003300' : '#275382',
+        <div [ngStyle]="{'color':project?.time ==='8:00 am' ? '#31b261' : '#275382',
             'font-weight':project?.time ==='8:00 am' ?'800':'normal'}"  [ngSwitch]="project?.time">
        
             Time: {{project?.time}}
