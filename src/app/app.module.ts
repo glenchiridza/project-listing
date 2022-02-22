@@ -7,6 +7,7 @@ import { Error404Component } from './errors/404.component';
 import { EventsAppComponent } from './events-app.component';
 import { CreateEventComponent } from './events/create-event.component';
 import { EventDetailsComponent } from './events/event-details/event-details.component';
+import { EventRouteActivator } from './events/event-details/event-route-activator.service';
 import { EventThumbnailComponent } from './events/event-thumbnail.component';
 import { EventListComponent } from './events/events-list.component';
 import { EventService } from './events/shared/events.service';
@@ -30,7 +31,18 @@ import { appRoutes } from './route';
   providers: [
     EventService,
     ToastrService,
+    EventRouteActivator,
+    {
+      provide:'canDeactivateCreateEvent',
+      useValue:checkDirtyState
+    }
   ],
   bootstrap: [EventsAppComponent]
 })
 export class AppModule { }
+
+export function checkDirtyState(component:CreateEventComponent){
+  if(!component.isDirty)
+    return window.confirm('you have not saved this form, sure you want to quit?')
+  return true
+}
