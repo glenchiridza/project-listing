@@ -2,24 +2,24 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { RouterModule } from '@angular/router';
 import {
-  CreateEventComponent,EventDetailsComponent,EventThumbnailComponent
-  ,EventListComponent,EventListResolver,EventService,EventRouteActivator
-} from './events/index'
+  CreateProjectComponent,ProjectDetailsComponent,ProjectThumbnailComponent
+  ,ProjectListComponent,ProjectListResolver,ProjectService,ProjectRouteActivator
+} from './projects/index'
 
 import { ToastrService } from './commons/toastr.service';
 import { Error404Component } from './errors/404.component';
-import { EventsAppComponent } from './events-app.component';
+import { ProjectsAppComponent } from './projects-app.component';
 import { NavbarComponent } from './nav/navbar.component';
 import { appRoutes } from './route';
 
 @NgModule({
   declarations: [
-    EventsAppComponent,
+    ProjectsAppComponent,
     NavbarComponent,
-    EventListComponent,
-    EventThumbnailComponent,
-    EventDetailsComponent,
-    CreateEventComponent,
+    ProjectListComponent,
+    ProjectThumbnailComponent,
+    ProjectDetailsComponent,
+    CreateProjectComponent,
     Error404Component,
   ],
   imports: [
@@ -27,20 +27,20 @@ import { appRoutes } from './route';
     RouterModule.forRoot(appRoutes),
   ],
   providers: [
-    EventService,
+    ProjectService,
     ToastrService,
-    EventRouteActivator,
-    EventListResolver,
+    ProjectRouteActivator,
+    ProjectListResolver,
     {
-      provide:'canDeactivateCreateEvent',
+      provide:'canDeactivateCreateProject',
       useValue:checkDirtyState
     }
   ],
-  bootstrap: [EventsAppComponent]
+  bootstrap: [ProjectsAppComponent]
 })
 export class AppModule { }
 
-export function checkDirtyState(component:CreateEventComponent){
+export function checkDirtyState(component:CreateProjectComponent){
   if(!component.isDirty)
     return window.confirm('you have not saved this form, sure you want to quit?')
   return true

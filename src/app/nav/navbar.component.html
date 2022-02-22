@@ -1,15 +1,15 @@
 <div class="navbar navbar-default">
     <div class="container-fluid">
       <div class="navbar-header">
-        <a class="navbar-brand" >ngEvents</a>
+        <a class="navbar-brand" >TheJourney</a>
       </div>
   
       <div class="collapse navbar-collapse">
         <ul class="nav navbar-nav">
           <li>
-            <a [routerLink]="['/events']" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">All Events</a>
+            <a [routerLink]="['/projects']" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">All Projects</a>
           </li>
-          <li><a [routerLink]="['/events/new']" routerLinkActive="active">Create Event</a></li>
+          <li><a [routerLink]="['/projects/new']" routerLinkActive="active">New Project</a></li>
           <li class="dropdown">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown" >
               Events
@@ -17,7 +17,7 @@
             </a>
             <ul class="dropdown-menu">
               <li >
-                <a href="">Angular Connect</a>
+                <a href="https://github.com/glenchiridza">GithubProjects</a>
               </li>
             </ul>
           </li>
@@ -31,7 +31,7 @@
         </div>
         <form id="searchForm"  class="navbar-form navbar-right"  >
           <div class="form-group">
-            <input type="text" class="form-control" placeholder="Search Sessions" >
+            <input type="text" class="form-control" placeholder="Search Projects" >
           </div>
           <button class="btn btn-default" >
             Search  

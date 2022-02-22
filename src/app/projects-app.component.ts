@@ -10,6 +10,6 @@ import { Component } from '@angular/core';
   
   `]
 })
-export class EventsAppComponent {
+export class ProjectsAppComponent {
   title = 'angular-events';
 }
