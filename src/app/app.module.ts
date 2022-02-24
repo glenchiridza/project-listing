@@ -11,6 +11,7 @@ import { Error404Component } from './errors/404.component';
 import { ProjectsAppComponent } from './projects-app.component';
 import { NavbarComponent } from './nav/navbar.component';
 import { appRoutes } from './route';
+import { AuthService } from './user/auth.service';
 
 @NgModule({
   declarations: [
@@ -31,6 +32,7 @@ import { appRoutes } from './route';
     ToastrService,
     ProjectRouteActivator,
     ProjectListResolver,
+    AuthService,
     {
       provide:'canDeactivateCreateProject',
       useValue:checkDirtyState
