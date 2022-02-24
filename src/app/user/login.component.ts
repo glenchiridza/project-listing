@@ -14,13 +14,19 @@ export class LoginComponent {
 
     userName:any
     password:any
+    mouseOverLogin!:boolean
 
-    constructor(private auth:AuthService){}
+    constructor(private auth:AuthService,private router:Router){}
 
     login(formValues:any){
         console.log(formValues)
 
         this.auth.loginUser(formValues.userName,formValues.password)
+        this.router.navigate(['projects'])
 
+    }
+
+    cancel(){
+        this.router.navigate(['projects'])
     }
 }
