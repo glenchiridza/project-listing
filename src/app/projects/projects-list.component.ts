@@ -1,5 +1,6 @@
 import { Component, OnInit } from "@angular/core";
 import { ActivatedRoute } from "@angular/router";
+import { IProject } from ".";
 import { ToastrService } from "../commons/toastr.service";
 import { ProjectService } from "./shared/projects.service";
 
@@ -22,7 +23,7 @@ import { ProjectService } from "./shared/projects.service";
 })
 export class ProjectListComponent implements OnInit{
 
-    projects!:any[]
+    projects!:IProject[]
     constructor(private projectService:ProjectService,
         private toastr:ToastrService,private route:ActivatedRoute){
     }

@@ -1,4 +1,5 @@
 import { Component, Input, Output,EventEmitter } from "@angular/core";
+import { IProject } from ".";
 
 @Component({
     selector: 'project-thumbnail',
@@ -44,7 +45,7 @@ import { Component, Input, Output,EventEmitter } from "@angular/core";
 })
 export class ProjectThumbnailComponent {
 
-    @Input() project:any
+    @Input() project!:IProject
 
     getStartTimeClass(){
         //const isEarlyStart = this.project && this.project?.time ==='8:00 am';

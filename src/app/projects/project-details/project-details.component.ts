@@ -1,6 +1,7 @@
 import { Component } from "@angular/core";
 import { ProjectService } from "../shared/projects.service";
 import { ActivatedRoute } from "@angular/router";
+import { IProject } from "..";
 
 @Component({
     templateUrl:'./project-details.component.html',
@@ -13,7 +14,7 @@ import { ActivatedRoute } from "@angular/router";
 
 export class ProjectDetailsComponent {
 
-    project:any;
+    project!:IProject|any;
 
     constructor(private projectService:ProjectService,private route:ActivatedRoute){}
 
