@@ -12,6 +12,7 @@ import { ProjectsAppComponent } from './projects-app.component';
 import { NavbarComponent } from './nav/navbar.component';
 import { appRoutes } from './route';
 import { AuthService } from './user/auth.service';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -25,6 +26,8 @@ import { AuthService } from './user/auth.service';
   ],
   imports: [
     BrowserModule,
+    ReactiveFormsModule,
+    FormsModule,
     RouterModule.forRoot(appRoutes),
   ],
   providers: [
