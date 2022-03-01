@@ -1,11 +1,12 @@
 import {Routes} from '@angular/router';
 import {
     
-  CreateProjectComponent,CreateSessionComponent,ProjectDetailsComponent
+  CreateProjectComponent,ProjectDetailsComponent
   ,ProjectListComponent,ProjectListResolver,ProjectRouteActivator
 } from './projects/index';
 import { Error404Component } from './errors/404.component';
 import { UserModule } from './user/user.module';
+import { CreateSessionComponent } from './projects/project-details/create-session.component';
 
 
 export const appRoutes:Routes = [

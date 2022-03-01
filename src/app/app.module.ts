@@ -3,7 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { RouterModule } from '@angular/router';
 import {
   CreateProjectComponent,ProjectDetailsComponent,ProjectThumbnailComponent
-  ,ProjectListComponent,ProjectListResolver,ProjectService,ProjectRouteActivator,CreateSessionComponent
+  ,ProjectListComponent,ProjectListResolver,ProjectService,ProjectRouteActivator
 } from './projects/index'
 
 import { ToastrService } from './commons/toastr.service';
@@ -13,6 +13,7 @@ import { NavbarComponent } from './nav/navbar.component';
 import { appRoutes } from './route';
 import { AuthService } from './user/auth.service';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { CreateSessionComponent } from './projects/project-details/create-session.component';
 
 @NgModule({
   declarations: [
