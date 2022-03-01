@@ -5,6 +5,12 @@ import { IProject } from ".";
 @Injectable()
 export class ProjectService {
 
+    saveProject(project:any){
+      project.id = 123,
+      project.session =[]
+      PROJECTS.push(project)
+    }
+
     getProjects():Observable<IProject[]>{
       let subject = new Subject<IProject[]>()
       setTimeout(()=>{subject.next(PROJECTS); subject.complete()},

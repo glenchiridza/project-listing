@@ -3,7 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { RouterModule } from '@angular/router';
 import {
   CreateProjectComponent,ProjectDetailsComponent,ProjectThumbnailComponent
-  ,ProjectListComponent,ProjectListResolver,ProjectService,ProjectRouteActivator
+  ,ProjectListComponent,ProjectListResolver,ProjectService,ProjectRouteActivator,CreateSessionComponent
 } from './projects/index'
 
 import { ToastrService } from './commons/toastr.service';
@@ -23,6 +23,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     ProjectDetailsComponent,
     CreateProjectComponent,
     Error404Component,
+    CreateSessionComponent,
   ],
   imports: [
     BrowserModule,

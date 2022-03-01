@@ -1,7 +1,7 @@
 import {Routes} from '@angular/router';
 import {
     
-  CreateProjectComponent,ProjectDetailsComponent
+  CreateProjectComponent,CreateSessionComponent,ProjectDetailsComponent
   ,ProjectListComponent,ProjectListResolver,ProjectRouteActivator
 } from './projects/index';
 import { Error404Component } from './errors/404.component';
@@ -12,6 +12,7 @@ export const appRoutes:Routes = [
     {path: 'projects/new',component:CreateProjectComponent,canDeactivate:['canDeactivateCreateProject']},
     {path: 'projects',component:ProjectListComponent,resolve:{projects:ProjectListResolver}},
     {path: 'projects/:id',component:ProjectDetailsComponent, canActivate:[ProjectRouteActivator]},
+    {path: 'projects/session/new',component:CreateSessionComponent},
     {path: '404',component:Error404Component},
     {path: '', redirectTo:'/projects', pathMatch:'full'},
 

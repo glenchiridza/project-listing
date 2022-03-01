@@ -1,5 +1,6 @@
 import { Component } from "@angular/core";
 import { Router } from "@angular/router";
+import { ProjectService } from ".";
 
 @Component({
     templateUrl:'create-project.component.html',
@@ -15,10 +16,12 @@ export class CreateProjectComponent{
     newProject:any;
     isDirty:boolean = false
 
-    constructor(private router:Router){}
+    constructor(private router:Router,private projectService:ProjectService){}
 
     saveProject(formValues:any){
         this.isDirty = true
+        this.projectService.saveProject(formValues);
+        this.router.navigate(['/projects'])
     }
 
     cancel(){
