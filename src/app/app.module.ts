@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { RouterModule } from '@angular/router';
 import {
-  CreateProjectComponent,ProjectDetailsComponent,ProjectThumbnailComponent
+  CreateProjectComponent,ProjectDetailsComponent,ProjectThumbnailComponent,SessionListComponent
   ,ProjectListComponent,ProjectListResolver,ProjectService,ProjectRouteActivator
 } from './projects/index'
 
@@ -25,6 +25,7 @@ import { CreateSessionComponent } from './projects/project-details/create-sessio
     CreateProjectComponent,
     Error404Component,
     CreateSessionComponent,
+    SessionListComponent
   ],
   imports: [
     BrowserModule,

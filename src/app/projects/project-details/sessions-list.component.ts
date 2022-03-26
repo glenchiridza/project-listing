@@ -8,5 +8,5 @@ import { ISession } from "..";
 
 export class SessionListComponent {
 
-    @Input() sessions!:ISession
+    @Input() sessions!:ISession[]
 }
