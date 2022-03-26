@@ -1,7 +1,7 @@
 import { Component } from "@angular/core";
 import { ProjectService } from "../shared/projects.service";
 import { ActivatedRoute } from "@angular/router";
-import { IProject } from "..";
+import { IProject, ISession } from "..";
 
 @Component({
     templateUrl:'./project-details.component.html',
@@ -26,6 +26,18 @@ export class ProjectDetailsComponent {
 
     addSession(){
         this.addMode = true;
+    }
+
+    saveNewSession(session:ISession){
+        const nextId = Math.max.apply(null,this.project.sessions.map((s:any) =>
+            s.id));
+        session.id = nextId + 1;
+        this.project.sessions.push(session)
+        this.projectService.updateProject(this.project)
+        this.addMode = false;
+    }
+    cancelAddSession(){
+        this.addMode = false;
     }
 }
 
