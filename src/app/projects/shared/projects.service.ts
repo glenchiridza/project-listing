@@ -11,6 +11,11 @@ export class ProjectService {
       PROJECTS.push(project)
     }
 
+    updateProject(project:any){
+      let index = PROJECTS.findIndex(x => x.id == project.id)
+      PROJECTS[index] = project
+    }
+
     getProjects():Observable<IProject[]>{
       let subject = new Subject<IProject[]>()
       setTimeout(()=>{subject.next(PROJECTS); subject.complete()},

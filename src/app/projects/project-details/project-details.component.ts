@@ -15,6 +15,7 @@ import { IProject } from "..";
 export class ProjectDetailsComponent {
 
     project!:IProject|any;
+    addMode!:boolean;
 
     constructor(private projectService:ProjectService,private route:ActivatedRoute){}
 
@@ -22,4 +23,9 @@ export class ProjectDetailsComponent {
         this.project = this.projectService
                          .getProject(+this.route.snapshot.params['id']);
     }
+
+    addSession(){
+        this.addMode = true;
+    }
 }
+
